@@ -1,0 +1,21 @@
+# Browse Chris - Explorer
+
+## Purpose
+Source File Checker Browser
+
+## Features
+
+
+## Technology
+Python / Tkinter
+
+## System requirements
+Windows 10 or newer
+
+## Installation
+Download the ZIP release, extract it, and run the application.
+
+## Links
+https://github.com/bmulti/Browse_Chris_Python_Explorer
+
+File: cpc-browse-chris.en.txt

@@ -1,0 +1,462 @@
+source_file = cpc_browse_chris.py
+source_modified = 2026-11-14 05:29:39
+name: annotation = value    line numbers   (functions: name() with their variables indented; classes: first-last)
+
+_ui_choices_path = Path(__file__).resolve().parent / 'ui_choices.py'    200
+_ui_choices_spec = importlib.util.spec_from_file_location('ui_choice…    202
+APP_TITLE = 'Browse Chris'    177
+build_treeview = None    316
+CONFIG_FILE = 'browse_chris.json'    179
+cpc_notes = None    216
+description = 'Source File Checker Browser'    12
+export_treeview_html = None    318
+FileRegister = None    187
+further = '\nBrowse files in a configured folder, inspect s…    13
+GatewayController = None    192
+HtmlTree = None    324
+insert_row = None    317
+named = 'Browse Chris - Explorer'    9
+prouect = 'python'    11
+publish_treeview_htmltree = None    319
+TREEVIEW_IMPORT_ERROR = ''    306, 315
+ui_choices = None    196, 205, 211
+UI_CHOICES_IMPORT_ERROR = ''    197, 210
+version = '5.4.3'    10
+VERSION = version    178
+apply_app_icon()
+    icon
+load_json_dict()
+    data
+    p
+    raw
+main()
+    root
+    splash
+    load_interface()
+        child
+save_json_dict()
+    p
+    tmp
+select_tab_by_text()
+    tab_id
+class BrowseChris    328-2388
+    self._gateway_loading = True    723, 731
+    self._last_scan_excluded = {}    513, 1567, 1613
+    self._last_scan_stats = {}    512, 1566, 1612
+    self._preview_loaded_mtime_ns = None    509, 1031, 1091, 1102
+    self._preview_path = None    508, 1030
+    self._published_by_iid = {}    516
+    self._records_by_iid = {}    510
+    self._sash_placed = False    813, 818
+    self._scan_token = 0    514
+    self._ui_choices_error = True    2281, 2285
+    self._ui_choices_loading = True    714, 718
+    self.backup_directory_var = tk.StringVar(master=self.master, value=self._init…    459
+    backup_selected_treeview_file = backup_selected_file    1818
+    self.browse_tab = None    493, 649
+    self.colors = apply_theme(self.master, self.ui_theme_name, dens…    450, 453, 2363, 2372
+    self.config = dict(self.DEFAULTS)    432, 534
+    self.config_canvas = canvas    2166
+    self.config_path = self.script_dir / CONFIG_FILE    431
+    self.config_save_button = ttk.Button(save_bar, text='Save Config', command=…    2154
+    self.config_save_status_var = tk.StringVar(master=self.master, value='')    466
+    self.config_tab = None    496, 652
+    self.current_selected_path = ''    511, 1676, 1685, 1879
+    DEFAULTS = {'directory': '', 'backup_directory': '', 'extens…    329
+    self.directory_combo = ttk.Combobox(location, textvariable=self.director…    767
+    self.directory_var = tk.StringVar(master=self.master, value=self._init…    458
+    self.embedded = bool(embedded)    423
+    EXTENSION_CHOICES = ('All files', '.py', '.pyw', '.pyx', '.md', '.txt…    356
+    self.extension_var = tk.StringVar(master=self.master, value=self._norm…    460
+    self.file_tree = None    502, 830, 832
+    self.gateway_controller = None    499, 725
+    self.gateway_tab = None    498, 654
+    self.host_context = host_context or {}    424
+    self.host_frame = master    425
+    HTML_create = export_html    2253
+    self.html_publish_directory_var = tk.StringVar(master=self.master, value=str(self.c…    473
+    self.html_publish_document_var = tk.StringVar(master=self.master, value=str(self.c…    483
+    self.html_publish_named_var = tk.StringVar(master=self.master, value=str(self.c…    480
+    self.html_publish_selected_only_var = tk.BooleanVar(master=self.master, value=bool(self…    487
+    self.html_publish_status_var = tk.StringVar(master=self.master, value='Ready')    490
+    self.html_publish_title_var = tk.StringVar(master=self.master, value=str(self.c…    477
+    self.html_tab = None    495, 651
+    self.html_tree = None    517, 1973
+    self.include_subdirs_var = tk.BooleanVar(master=self.master, value=bool(self…    462
+    self.master = master    422
+    self.name_prefix_var = tk.StringVar(master=self.master, value=str(self.c…    463
+    self.notebook = None    492, 646
+    self.preview_kind_var = tk.StringVar(master=self.master, value='')    507
+    PREVIEW_MAX_BYTES = 1500000    413
+    self.preview_meta_var = tk.StringVar(master=self.master, value='')    506
+    self.preview_tab = None    494, 650
+    self.preview_text = None    503, 894
+    PREVIEW_TEXT_EXTS = {'.py', '.pyw', '.pyx', '.txt', '.md', '.markdown…    414
+    self.preview_title_var = tk.StringVar(master=self.master, value='No file s…    505
+    self.published_tree = None    515, 2085, 2087
+    self.quick_preview_text = None    504, 1925
+    self.refresh_notes = None    501, 700
+    self.scan_button = ttk.Button(location, text='Scan', command=self.re…    774
+    scan_python_files_and_show_tree = scan_files    2255
+    self.script_dir = Path(__file__).resolve().parent    430
+    self.search_var = tk.StringVar(master=self.master, value=str(self.c…    464
+    self.selected_path_var = tk.StringVar(master=self.master, value='')    467
+    self.show_gateway = True if not self.embedded else bool(self.host_con…    427
+    self.show_ui_choices = True if not self.embedded else bool(self.host_con…    428
+    self.status_var = tk.StringVar(master=self.master, value='Ready')    465
+    TIME_CHOICES = ('All dates', 'Today', 'Yesterday', 'Last 1 hour'…    362
+    self.time_period_var = tk.StringVar(master=self.master, value=self._norm…    461
+    treeview_populate = refresh    2254
+    TV_FILES = {'title': 'Browse Chris Files', 'columns': ('self…    387
+    TV_PUBLISHED = {'title': 'Browse Chris Published Files', 'column…    402
+    self.ui_choices_controller = None    500, 2263, 2280
+    self.ui_choices_tab = None    497, 653
+    self.ui_density = normalize_density_name(self.config.get('ui_densit…    439, 2356
+    self.ui_density_var = tk.StringVar(master=self.master, value=self.ui_de…    469, 2275
+    self.ui_theme_name = normalize_theme_name(self.config.get('ui_theme_na…    438, 2355
+    self.ui_theme_status_var = tk.StringVar(master=self.master, value='')    472
+    self.ui_theme_var = tk.StringVar(master=self.master, value=self.ui_th…    468, 2274
+    self.window_height_var = tk.StringVar(master=self.master, value=str(height…    471, 2277
+    self.window_width_var = tk.StringVar(master=self.master, value=str(width))    470, 2276
+    __init__()
+        height
+        key
+        value
+        width
+    _apply_scan()
+        descending
+        hidden
+        iid
+        record
+        records
+        sort_column
+        stats
+        status
+        values
+    _apply_ui_theme_choice()
+        density
+        height
+        name
+        width
+    _build_browse_tab()
+        body
+        bottom
+        buttons
+        ext_combo
+        filters
+        location
+        period_combo
+        prefix
+        preview_pane
+        search
+        selected_entry
+        tab
+        tree_frame
+        upper
+        place_sash()
+            height
+    _build_config_tab()
+        actions
+        canvas
+        dirs
+        horizontal
+        outer
+        save_bar
+        scan
+        scroll
+        tab
+        window
+        bind_wheel()
+            child
+    _build_html_publish_panel()
+        folder_row
+    _build_html_tab()
+        area
+        bar
+        canvas
+        content
+        heads
+        listing
+        panel
+        scroll
+        tab
+        tree_frame
+        window
+    _build_in()
+        last_tab
+        restored
+        selected
+    _build_preview_tab()
+        actions
+        body
+        head
+        meta
+        tab
+        xscroll
+        yscroll
+    _build_quick_preview()
+        quick_x
+        quick_y
+    _build_ui_choices_tab()
+        action
+        appearance
+        density_frame
+        error
+        size
+        tab
+        value
+    _clear_preview_syntax_tags()
+        tag
+    _configure_preview_tags()
+        options
+        palette
+        selected
+        selected_fg
+        tag
+    _configure_tree_tags()
+        bg
+        field
+    _format_size()
+        size
+        unit
+    _hex_luminance()
+        b
+        g
+        r
+        value
+    _highlight_generic_code()
+        comment_re
+        keywords
+        kw_re
+        match
+    _highlight_json()
+        match
+        remainder
+        tag
+        token_re
+        value
+    _highlight_markdown()
+        match
+    _highlight_markup()
+        a_end
+        a_start
+        attr
+        match
+        q_end
+        q_start
+        quoted
+        raw
+    _highlight_preview()
+        suffix
+    _highlight_python()
+        _line
+        end
+        end_i
+        match
+        previous_significant
+        start
+        start_i
+        stream
+        tag
+        tok
+        tokens
+        ttype
+        value
+    _highlight_script()
+        comment_re
+        match
+        variable_re
+    _html_publisher()
+        directory
+    _initial_backup_directory()
+        value
+    _initial_directory()
+        value
+    _inspect_python_source()
+        content
+        descs
+        key
+        match
+        pattern
+        patterns
+        result
+        value
+    _iter_candidate_files()
+        include_subdirs
+        iterator
+        path
+        root
+    _load_config()
+        loaded
+    _looks_textual()
+        byte
+        printable
+        sample
+    _matches_date()
+        age_seconds
+        day_windows
+        hour_windows
+        modified
+        now
+        period
+    _matches_extension()
+        selected
+    _normalise_extension()
+        value
+    _normalise_time_period()
+        text
+    _on_tab_changed()
+        selected_text
+    _period_window()
+        day_windows
+        end
+        hour_windows
+        now
+        period
+        start
+    _preview_palette()
+        dark
+        fg
+        field
+    _publish_html_tree()
+        directory
+        publisher
+        result
+    _refresh_preview()
+        encoding
+        fh
+        kind
+        modified
+        path
+        raw
+        stat
+        suffix_label
+        text
+        truncated
+    _remember_directory()
+        history
+    _remember_file()
+        history
+    _restore_selection()
+        iid
+        record
+        wanted
+    _scan()
+        directory
+        directory_text
+        excluded
+        haystack
+        meta
+        path
+        prefix
+        record
+        records
+        search_text
+        stat
+        stats
+    _selected_path()
+        path
+    _set_title_status()
+        title
+    _strip_empty_lines()
+        lines
+    _tag_offsets()
+        end_col
+        end_line
+        end_line_start
+        line_start
+        start_col
+        start_line
+    _update_quick_preview()
+        _encoding
+        content
+        raw
+        source
+        widget
+    _validated_window_size()
+        height
+        width
+    backup_file()
+        backup_dir
+        source
+        stamp
+        target
+    browse_file_and_backup()
+        chosen
+        current
+    choose_backup_directory()
+        chosen
+        current
+    choose_directory()
+        chosen
+        current
+    choose_html_publish_directory()
+        chosen
+        current
+    download_selected()
+        dest_dir
+        source
+        target
+    export_html()
+        path
+    go_up()
+        current
+        parent
+    launch_published_file()
+        path
+        selection
+    on_row_selected()
+        path
+        record
+        selection
+    open_backup_dir()
+        path
+    open_file_natively()
+        path
+    open_html_publish_directory()
+        target
+    open_html_tree_index()
+        _directory
+        publisher
+    open_selected_folder()
+        folder
+        path
+    open_source_dir()
+        path
+    pick_source_file()
+        chosen
+        select_chosen()
+            iid
+            record
+    refresh()
+        box
+        settings
+        token
+        worker
+        poll()
+            excluded
+            records
+            stats
+    refresh_published_files()
+        directory
+        iid
+        modified_ts
+        path
+        rows
+        size
+        stat
+        values
+    run_selected()
+        ext
+        path
+    scan_files()
+        excluded
+        records
+        stats
+    split_file()
+        _stem
+        directory
+        ext
+        filename
+    use_path()
+        target

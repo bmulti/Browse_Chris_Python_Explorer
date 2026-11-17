@@ -1,0 +1,129 @@
+source_file = cpc_browse_chris.py
+source_modified = 2026-11-14 05:29:39
+name(parameters) -> return  [decorators]    first line   (classes: first-last)
+
+apply_app_icon(master, file_path)    253
+apply_theme(master, name, density='Normal')    250
+attach(parent, context=None)    2391
+current_tab_text(notebook)    287
+density_names()    238
+load_json_dict(path, defaults=None)    264
+main()    2396
+    load_interface()    2406
+normalize_density_name(value)    232
+normalize_theme_name(value)    229
+process()    2422
+save_json_dict(path, data)    276
+select_tab_by_text(notebook, text)    293
+theme_names()    235
+theme_palette(_name)    241
+class BrowseChris    328-2388
+    __init__(self, master, embedded=False, host_context=None)    421
+    _apply_scan(self, records, stats, excluded)    1611
+    _apply_ui_theme_choice(self, theme=None, density=None, _config=None)    2341
+    _attach_notes(self)    697
+    _build_browse_tab(self)    758
+        place_sash(event)    815
+    _build_config_tab(self)    2148
+        bind_wheel(widget)    2221
+        fit(event=None)    2168
+        wheel(event)    2217
+    _build_html_publish_panel(self, panel)    1893
+    _build_html_tab(self)    2040
+    _build_in(self, container)    645
+    _build_preview_tab(self)    865
+    _build_quick_preview(self, parent)    1922
+    _build_ui_choices_tab(self)    2260
+    _capture_current_window_size(self)    2334
+    _clear_preview_syntax_tags(self)    1104
+    _configure_preview_tags(self)    972
+    _configure_tree_tags(self)    1281
+    _decode_preview(raw)  [@staticmethod]    1018
+    _format_size(size)  [@staticmethod]    1377
+    _hex_luminance(value)  [@staticmethod]    920
+    _highlight_generic_code(self, text, suffix)    1251
+    _highlight_json(self, text)    1192
+    _highlight_markdown(self, text)    1222
+    _highlight_markup(self, text)    1207
+    _highlight_preview(self, path, text)    1123
+    _highlight_python(self, text)    1145
+    _highlight_script(self, text, suffix)    1234
+    _html_publisher(self)    1967
+    _initial_backup_directory(self)    542
+    _initial_directory(self)    536
+    _inspect_python_source(self, path)    1393
+    _iter_candidate_files(self, directory, include_subdirs=None)    1436
+    _load_config(self)    530
+    _load_gateway(self)    720
+    _load_ui_choices(self)    711
+    _looks_textual(raw, suffix)  [@staticmethod]    1003
+    _matches_date(self, modified_ts, period=None)    1458
+    _matches_extension(self, path, selected=None)    1451
+    _normalise_extension(value)  [@staticmethod]    549
+    _normalise_time_period(self, value)    557
+    _on_tab_changed(self, _event=None)    733
+    _period_window(self)    1322
+    _preview_palette(self)    930
+    _preview_select_all(self, _event=None)    914
+    _publish_html_tree(self, update_index=False, open_index=False)    1988
+    _refresh_preview(self, force=False)    1034
+    _remember_directory(self, value)    1697
+    _remember_file(self, value)    1707
+    _restore_selection(self)    1661
+    _scan(self, settings)    1504
+    _scan_settings(self)    1493
+    _selected_path(self)    1693
+    _set_preview(self, path)    1029
+    _set_title_status(self, text='')    636
+    _sorted_records(self, records, column, descending)    1648
+        key(record)    1649
+    _strip_empty_lines(text)  [@staticmethod]    1385
+    _tag_offsets(self, tag, text, start_offset, end_offset)    1183
+    _tag_span(self, tag, start, end)    1114
+    _tk_index(line, column)  [@staticmethod]    1120
+    _update_quick_preview(self, path)    1935
+    _validated_window_size(self)    561
+    backup_file(self, source)    1794
+    backup_now(self)    1828
+    backup_selected_file(self)    1814
+    browse_file_and_backup(self)    1820
+    choose_backup_directory(self)    2229
+    choose_directory(self)    1304
+    choose_html_publish_directory(self)    1957
+    clear_search(self)    1293
+    close(self)    627
+    download_selected(self)    1831
+    dual_drop(self, last_dir=None, last_file=None)    1875
+    export_html(self)    2238
+    go_up(self)    1313
+    launch_published_file(self)    2134
+    llabel(self, message)    2381
+    log(self, text)    2384
+    on_row_selected(self, _event=None)    1673
+    open_backup_dir(self)    1782
+    open_file_natively(self, path)    1718
+    open_html_publish_directory(self)    2032
+    open_html_tree_index(self)    2025
+    open_selected_folder(self)    1761
+    open_selected_natively(self)    1734
+    open_source_dir(self)    1772
+    pick_source_file(self)    1846
+        select_chosen()    1851
+    publish_html_tree_index(self)    2022
+    publish_html_tree_page(self)    2019
+    refresh(self, on_done=None)    1570
+        poll()    1591
+        work()    1580
+    refresh_managed_state(self)    2387
+    refresh_published_files(self)    2098
+    reset_filters(self)    1297
+    run_path(self)    1757
+    run_selected(self)    1737
+    save_config(self, *_args, **_kwargs)    603
+    save_config_from_button(self)    620
+    scan_files(self)    1563
+    shutdown(self)    617
+    split_file(self, file_path)    1870
+    sync_config_to_dict(self)    573
+    ui(self)    706
+    use_path(self, path=None)    1861

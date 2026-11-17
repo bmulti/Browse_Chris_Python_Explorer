@@ -1,0 +1,33 @@
+{
+  "app_name": "cpc_browse_chris",
+  "tabs": [
+    {
+      "id": "browse",
+      "label": "Browse"
+    },
+    {
+      "id": "preview",
+      "label": "Preview"
+    },
+    {
+      "id": "html-publish",
+      "label": "HTML Publish"
+    },
+    {
+      "id": "config",
+      "label": "Config"
+    },
+    {
+      "id": "ui-choices",
+      "label": "UI Choices"
+    },
+    {
+      "id": "gateway",
+      "label": "Gateway"
+    },
+    {
+      "id": "about",
+      "label": "About"
+    }
+  ]
+}

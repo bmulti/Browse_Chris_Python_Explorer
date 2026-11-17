@@ -1,0 +1,91 @@
+[intro]
+Browse Chris finds files in a folder, helps you inspect their contents, and lets
+you open, run, copy or back up a selected file. Python files also show their
+description, application name, version and principal class when that information
+can be read from the source. Scanning reads files; it does not run their code.
+
+Start by opening Browse, choosing a folder and pressing Scan. Select a result to
+inspect it in Preview. Set your usual folders and scan options in Config, then
+press Save Config. Click any Notes heading to open its corresponding tab.
+
+[tab:browse]
+Choose the folder to inspect using Browse or the folder box, then press Scan.
+Up moves to its parent folder. Scanning stays within the chosen folder; Include
+subfolders extends it to folders beneath that location. Scanning runs in the
+background, so the window stays usable; the window title and status line show
+Scanning... until the table is filled.
+
+Type limits the results to one file extension, or All files. Modified limits
+results by modification date. Prefix keeps filenames beginning with the text
+you enter. Search matches filenames, paths and the source information shown in
+the table. Press Enter after changing Prefix or Search. Reset Filters removes
+those restrictions. The status line explains how many files were shown and how
+many were excluded by each filter.
+
+Select a result to see its full path. Run / Open runs Python scripts and opens
+other files in their normal application; use it only when you intend to launch
+the selected file. Open Natively uses the operating system's file association.
+Backup Selected copies the file to your configured backup folder. Copy To lets
+you choose a destination. Open Folder opens the selected file's folder.
+
+The Selected Python file preview runs across the bottom of the page, below the
+buttons, and takes about one third of the height. Drag the divider above it to
+change the split. Publishing the file list is on the HTML Publish tab.
+
+[tab:preview]
+Select a file in Browse, then open Preview to read it. Python and supported
+source files use syntax colouring. Preview shows filename, size and modification
+information. It is read-only: editing and saving source files are not provided
+here. Large text files are shortened for display. Binary files show information
+instead of unreadable contents. Refresh Preview reloads a file changed outside
+the app.
+
+[tab:html-publish]
+The two headings at the top show the Selected folder and Selected file chosen in
+Browse. They follow Browse as you change them.
+
+The Publish panel exports the displayed Browse file list. Set the page title,
+Named, Document and the publish folder, then press Publish Page or Publish +
+Update Index. Selected rows only limits publishing to the rows selected in Browse.
+Open Index opens the published index; Open Publish Folder opens the folder.
+
+The list on the right shows the files in the publish folder (this folder only,
+not subfolders), newest first. Click a column heading to sort. Double-click a
+file, or select it and press Open, to open it in its normal application. Refresh
+List reloads the folder; it also reloads when you open this tab and after each
+publish.
+
+[tab:config]
+Set the default scan folder, backup folder and HTML publish folder. Choose the
+file type, modification period, subfolder option and filename prefix you normally
+use. These controls share their values with Browse.
+
+Press Save Config at the top of the page. A message beside the button confirms
+that browse_chris.json was saved. Those folders and options are restored the
+next time Browse Chris opens. The settings area scrolls in a smaller window;
+the save button stays visible above it.
+
+Scan Folder scans using the current settings. Open Scan Folder and Open Backup
+Folder open those locations. Browse File + Backup lets you choose a file to copy
+to the backup folder. Quick HTML Export exports the current file table. Scan
+errors, including a missing folder, appear in the Browse status line. Choose a
+folder before scanning; a blank location is not used as a working folder.
+
+The companion Browse_Chris.libraries.json settings file lists the shared-library
+locations the app is allowed to use. Adjust it if the shared library moves. It
+does not expand the folder selected for file scanning.
+
+[tab:ui-choices]
+Choose a colour theme, spacing, text appearance and window size. These settings
+control how the app looks. File locations and scan options belong in Config.
+
+[tab:about]
+Read the application's name, version, source identity and support information.
+
+[tab:gateway]
+Use the shared launcher to find and open registered applications, files, folders
+and links. Gateway is separate from the folder scan in Browse Chris.
+
+[footer]
+[Mr Bmulti](http://mrbmulti.com)
+[GitHub](https://githum/mrBmulti)

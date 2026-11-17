@@ -1,0 +1,23 @@
+{
+  "files": [
+    ".gitignore",
+    "INSTALL.md",
+    "README.md",
+    "copyright.txt",
+    "cpc_browse_chris-vars_index.txt",
+    "cpc_browse_chris.en.txt",
+    "cpc_browse_chris.index.json",
+    "cpc_browse_chris.index.txt",
+    "cpc_browse_chris.json",
+    "cpc_browse_chris.tabs.json",
+    "cpc_browse_chris_splash.png",
+    "docs/en.html",
+    "docs/images/splash-000-cpc_browse_chris_splash.png",
+    "docs/index.html",
+    "docs/logo.png",
+    "docs/styles.css",
+    "logo.png",
+    "notes/cpc-browse-chris.en.txt"
+  ],
+  "managed_by": "CPC GitHub Publisher"
+}
